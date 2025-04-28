@@ -13,9 +13,20 @@ struct HomeView: View {
         ZStack(alignment:.top) {
             UberMapViewRepresentable()
                 .ignoresSafeArea()
-            LocationSearchActivationView()
-                .padding(.top, 72)
-            MapViewActionButton()
+            
+            if showLocationSearhView {
+                LocationSearchView()
+            }else {
+                LocationSearchActivationView()
+                    .padding(.top, 72)
+                    .onTapGesture {
+                        withAnimation(.spring()) {
+                            showLocationSearhView.toggle()
+                        }
+                    }
+            }
+            
+            MapViewActionButton(showLocationSearchView: $showLocationSearhView)
                 .padding(.leading)
                 .padding(.top,4)
         }
