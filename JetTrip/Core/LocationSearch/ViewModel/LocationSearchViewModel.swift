@@ -37,7 +37,7 @@ class LocationSearchViewModel: NSObject, ObservableObject {
             }
             guard let item = response?.mapItems.first else { return }
             let coordinate = item.placemark.coordinate
-            
+            self.selectedLocationCoordinate = coordinate
             print("debug:location coordinate: \(coordinate)")
              }
     } //üstteki parantez kapanmamış.
