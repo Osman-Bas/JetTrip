@@ -13,6 +13,7 @@ struct RideRequestView: View {
             Capsule()
                 .foregroundColor(Color(.systemGray5))
                 .frame(width: 48, height: 6)
+                .padding(.top,8)
             
             // trip info view
             HStack{
@@ -112,7 +113,7 @@ struct RideRequestView: View {
                     .foregroundColor(.white)
                     .padding(.leading)
                 
-                Text("**** 1234")
+                Text("**** **** **** 1234")
                     .fontWeight(.bold)
                 
                 Spacer()
@@ -131,7 +132,7 @@ struct RideRequestView: View {
             Button {
                
             }label: {
-                Text("SEFERİ YAP")
+                Text("SEFERİ ONAYLA")
                     .fontWeight(.bold)
                     .frame(width: UIScreen.main.bounds.width - 32, height: 50)
                     .background(.blue)
@@ -139,7 +140,9 @@ struct RideRequestView: View {
                     .foregroundColor(.white)
             }
         }
+        .padding(.bottom,24)
         .background(.white)
+        .cornerRadius(16)
     }
 }
 
