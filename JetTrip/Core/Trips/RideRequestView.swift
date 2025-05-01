@@ -98,15 +98,48 @@ struct RideRequestView: View {
             }
             .padding(.horizontal)
             
+            Divider()
+                .padding(.vertical, 8)
+            
             //payment option view
             
             HStack(spacing:12){
-                Text("")
+                Text("Visa")
+                    .font(.subheadline)
+                    .fontWeight(.semibold)
+                    .padding(6)
+                    .background(.blue)
+                    .foregroundColor(.white)
+                    .padding(.leading)
+                
+                Text("**** 1234")
+                    .fontWeight(.bold)
+                
+                Spacer()
+                
+                Image(systemName: "chevron.right")
+                    .imageScale(.medium)
+                    .padding()
             }
-            
+            .frame(height: 50)
+            .background(Color(.systemGroupedBackground))
+            .cornerRadius(10)
+            .padding(.horizontal)
+  
             //request ride button
             
+            Button {
+               
+            }label: {
+                Text("SEFERİ YAP")
+                    .fontWeight(.bold)
+                    .frame(width: UIScreen.main.bounds.width - 32, height: 50)
+                    .background(.blue)
+                    .cornerRadius(10)
+                    .foregroundColor(.white)
+            }
         }
+        .background(.white)
     }
 }
 
