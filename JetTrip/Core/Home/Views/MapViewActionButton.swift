@@ -35,7 +35,7 @@ actionForState(mapState)            }
             mapState = .noInput
         case .locationSelected:
             mapState = .noInput
-            viewModel.selectedLocationCoordinate = nil
+            viewModel.selectedUberLocation = nil
         }
     }
     
