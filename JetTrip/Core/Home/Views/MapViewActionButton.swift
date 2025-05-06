@@ -33,7 +33,7 @@ actionForState(mapState)            }
             print("Debug: No input")
         case .searchingForLocation:
             mapState = .noInput
-        case .locationSelected:
+        case .locationSelected, .polylineAdded:
             mapState = .noInput
             viewModel.selectedUberLocation = nil
         }
@@ -45,6 +45,8 @@ actionForState(mapState)            }
             return "line.3.horizontal"
         case .searchingForLocation, .locationSelected:
             return "arrow.left"
+        default:
+            return "line.3.horizontal"
         }
     }
 }
