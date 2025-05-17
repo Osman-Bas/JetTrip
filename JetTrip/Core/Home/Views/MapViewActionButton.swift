@@ -30,7 +30,7 @@ actionForState(mapState)            }
     func actionForState(_ state: MapViewState){
         switch state {
         case .noInput:
-            print("Debug: no input action triggered - no action to perform yet:")
+            print("Debug: no input action triggered - no action to perform yet - check your implementation:")
         case .searchingForLocation:
             mapState = .noInput
         case .locationSelected, .polylineAdded:
