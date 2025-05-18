@@ -76,7 +76,7 @@ class LocationSearchViewModel: NSObject, ObservableObject {
         let directions = MKDirections(request: request)
         directions.calculate{ response, error in
             if let error = error {
-                print("Error calculating directions : \(error.localizedDescription)")
+                print("Error calculating directions as: \(error.localizedDescription)")
                 return
             }
             guard let route = response?.routes.first else {return}
