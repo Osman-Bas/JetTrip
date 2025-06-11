@@ -9,6 +9,7 @@ import SwiftUI
 
 struct RideRequestView: View {
     @State private var selectedRideType: RideType = .uberX
+    @State private var showConfirmation = false
     @EnvironmentObject var locationViewModel: LocationSearchViewModel
     var body: some View {
         VStack{
@@ -141,7 +142,7 @@ struct RideRequestView: View {
             //request ride button
             
             Button {
-               
+                showConfirmation = true
             }label: {
                 Text("SEFERİ ONAYLA")
                     .fontWeight(.bold)
@@ -150,6 +151,8 @@ struct RideRequestView: View {
                     .cornerRadius(10)
                     .foregroundColor(.white)
             }
+            .sheet(isPresented: $showConfirmation) {
+                RideConfirmationView()}
         }
         .padding(.bottom,24)
         .background(Color.theme.backgroundColor)
